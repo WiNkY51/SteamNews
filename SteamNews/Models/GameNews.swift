@@ -7,9 +7,8 @@
 
 import Foundation
 
-struct NewsModel: Decodable {
+struct GameNews: Decodable {
     let appnews: AppNews
-    
 }
 
 struct AppNews: Decodable {
@@ -19,6 +18,7 @@ struct AppNews: Decodable {
 
 struct Newsitems: Decodable {
     let title: String
-    let url: URL
     let author: String
+    let url: URL
+    let date: Double
 }

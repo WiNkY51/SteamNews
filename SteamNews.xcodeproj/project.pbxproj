@@ -12,10 +12,13 @@
 		CAA769342CA2094B00F8A461 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CAA769332CA2094B00F8A461 /* Base */; };
 		CAA769362CA2094C00F8A461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAA769352CA2094C00F8A461 /* Assets.xcassets */; };
 		CAA769392CA2094C00F8A461 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CAA769382CA2094C00F8A461 /* Base */; };
-		CAA769412CA20A7100F8A461 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA769402CA20A7100F8A461 /* NewsViewController.swift */; };
-		CAA769432CA20A9A00F8A461 /* NewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA769422CA20A9A00F8A461 /* NewsViewCell.swift */; };
-		CAA769452CA20AC500F8A461 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA769442CA20AC500F8A461 /* NewsModel.swift */; };
-		CAA769472CA222A700F8A461 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA769462CA222A700F8A461 /* StartViewController.swift */; };
+		CAA769432CA20A9A00F8A461 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA769422CA20A9A00F8A461 /* NewsCell.swift */; };
+		CAA769452CA20AC500F8A461 /* GameNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA769442CA20AC500F8A461 /* GameNews.swift */; };
+		CAA769562CB5619E00F8A461 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA769552CB5619E00F8A461 /* WebViewController.swift */; };
+		CAA769592CB562F300F8A461 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA769582CB562F300F8A461 /* StartViewController.swift */; };
+		CAA7695B2CB5638400F8A461 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA7695A2CB5638400F8A461 /* NewsViewController.swift */; };
+		CAA7695D2CB5640900F8A461 /* WebMenager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA7695C2CB5640900F8A461 /* WebMenager.swift */; };
+		CAA7695F2CB5671A00F8A461 /* GamePrevievCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA7695E2CB5671A00F8A461 /* GamePrevievCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +29,13 @@
 		CAA769352CA2094C00F8A461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAA769382CA2094C00F8A461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAA7693A2CA2094C00F8A461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CAA769402CA20A7100F8A461 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
-		CAA769422CA20A9A00F8A461 /* NewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCell.swift; sourceTree = "<group>"; };
-		CAA769442CA20AC500F8A461 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
-		CAA769462CA222A700F8A461 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		CAA769422CA20A9A00F8A461 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		CAA769442CA20AC500F8A461 /* GameNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNews.swift; sourceTree = "<group>"; };
+		CAA769552CB5619E00F8A461 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		CAA769582CB562F300F8A461 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		CAA7695A2CB5638400F8A461 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		CAA7695C2CB5640900F8A461 /* WebMenager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebMenager.swift; sourceTree = "<group>"; };
+		CAA7695E2CB5671A00F8A461 /* GamePrevievCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePrevievCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +70,10 @@
 			children = (
 				CAA7694A2CA2273600F8A461 /* App */,
 				CAA769482CA226FF00F8A461 /* ViewControllerts */,
+				CAA769532CB560F900F8A461 /* Views */,
 				CAA769492CA2271600F8A461 /* Storyboards */,
 				CAA7694B2CA2274200F8A461 /* Models */,
+				CAA769572CB561FC00F8A461 /* Services */,
 				CAA7694C2CA2275C00F8A461 /* Resouces */,
 			);
 			path = SteamNews;
@@ -74,9 +82,9 @@
 		CAA769482CA226FF00F8A461 /* ViewControllerts */ = {
 			isa = PBXGroup;
 			children = (
-				CAA769462CA222A700F8A461 /* StartViewController.swift */,
-				CAA769402CA20A7100F8A461 /* NewsViewController.swift */,
-				CAA769422CA20A9A00F8A461 /* NewsViewCell.swift */,
+				CAA769582CB562F300F8A461 /* StartViewController.swift */,
+				CAA7695A2CB5638400F8A461 /* NewsViewController.swift */,
+				CAA769552CB5619E00F8A461 /* WebViewController.swift */,
 			);
 			path = ViewControllerts;
 			sourceTree = "<group>";
@@ -103,7 +111,7 @@
 		CAA7694B2CA2274200F8A461 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CAA769442CA20AC500F8A461 /* NewsModel.swift */,
+				CAA769442CA20AC500F8A461 /* GameNews.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -114,6 +122,23 @@
 				CAA769352CA2094C00F8A461 /* Assets.xcassets */,
 			);
 			path = Resouces;
+			sourceTree = "<group>";
+		};
+		CAA769532CB560F900F8A461 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CAA769422CA20A9A00F8A461 /* NewsCell.swift */,
+				CAA7695E2CB5671A00F8A461 /* GamePrevievCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CAA769572CB561FC00F8A461 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CAA7695C2CB5640900F8A461 /* WebMenager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,12 +212,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAA769412CA20A7100F8A461 /* NewsViewController.swift in Sources */,
-				CAA769432CA20A9A00F8A461 /* NewsViewCell.swift in Sources */,
+				CAA769432CA20A9A00F8A461 /* NewsCell.swift in Sources */,
 				CAA7692D2CA2094B00F8A461 /* AppDelegate.swift in Sources */,
 				CAA7692F2CA2094B00F8A461 /* SceneDelegate.swift in Sources */,
-				CAA769452CA20AC500F8A461 /* NewsModel.swift in Sources */,
-				CAA769472CA222A700F8A461 /* StartViewController.swift in Sources */,
+				CAA7695F2CB5671A00F8A461 /* GamePrevievCell.swift in Sources */,
+				CAA769562CB5619E00F8A461 /* WebViewController.swift in Sources */,
+				CAA7695B2CB5638400F8A461 /* NewsViewController.swift in Sources */,
+				CAA7695D2CB5640900F8A461 /* WebMenager.swift in Sources */,
+				CAA769452CA20AC500F8A461 /* GameNews.swift in Sources */,
+				CAA769592CB562F300F8A461 /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +298,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -327,7 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
