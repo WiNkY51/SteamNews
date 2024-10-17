@@ -7,8 +7,11 @@
 
 import UIKit
 
+
+
 final class GamePreviewCell: UICollectionViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
 }

@@ -12,20 +12,12 @@ final class NewsViewController: UITableViewController {
     @IBOutlet weak var icon: UIImageView!
     
     private var gameNews: [Newsitems] = []
-    private let webMenager = WebMenager.shared
+    private let networkManager = NetworkManager.shared
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        icon.layer.cornerRadius = 25
-        
-
-    }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         gameNews.count
     }
 
@@ -47,44 +39,36 @@ final class NewsViewController: UITableViewController {
 
     
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let news = sender as? Newsitems else { return }
-        let webVC = segue.destination as? WebViewController
-        webVC?.presentNews(news.url)
+        let contentVC = segue.destination as? ContentViewController
         
-        
+        contentVC?.titleText = news.title
+        contentVC?.contentText = news.contents
     }
-    
-
 }
 
 extension NewsViewController {
     func fetchNews(_ gameId: String) {
-        var data: GameNews!
-        webMenager.fetch(GameNews.self, gameId) {[weak self] result in
-            guard let self else { return }
+        networkManager.fetchNews(gameId) {[unowned self] result in
+            
             switch result {
-                case .success(let news):
-                    data = news
-                    print(data ?? "no Data")
-                    self.gameNews = data.appnews.newsitems
+                case .success(let data):
+                    gameNews = data
                     tableView.reloadData()
-                case .failure(let failure):
-                    print("News - \(failure)")
+                case .failure(let error):
+                    print(error.localizedDescription)
             }
         }
     }
     
-    func fetchIcon(_ url: URL) {
-        webMenager.fetchIcon(url) {[weak self] result in
-            guard let self else { return }
+    func fetchIcon(_ appid: String) {
+        networkManager.fetchData(appid) {[unowned self] result in
             switch result {
                 case .success(let image):
-                    self.icon.image = UIImage(data: image)
-                case .failure(let failure):
-                    print(failure)
+                    icon.image = UIImage(data: image)
+                case .failure(let error):
+                    print(error.localizedDescription)
             }
         }
     }

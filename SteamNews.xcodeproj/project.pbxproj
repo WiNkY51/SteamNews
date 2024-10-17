@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA77273D2CBE25D7004DC2A3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CA77273C2CBE25D7004DC2A3 /* Alamofire */; };
 		CAA7692D2CA2094B00F8A461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA7692C2CA2094B00F8A461 /* AppDelegate.swift */; };
 		CAA7692F2CA2094B00F8A461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA7692E2CA2094B00F8A461 /* SceneDelegate.swift */; };
 		CAA769342CA2094B00F8A461 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CAA769332CA2094B00F8A461 /* Base */; };
@@ -14,10 +15,10 @@
 		CAA769392CA2094C00F8A461 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CAA769382CA2094C00F8A461 /* Base */; };
 		CAA769432CA20A9A00F8A461 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA769422CA20A9A00F8A461 /* NewsCell.swift */; };
 		CAA769452CA20AC500F8A461 /* GameNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA769442CA20AC500F8A461 /* GameNews.swift */; };
-		CAA769562CB5619E00F8A461 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA769552CB5619E00F8A461 /* WebViewController.swift */; };
+		CAA769562CB5619E00F8A461 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA769552CB5619E00F8A461 /* ContentViewController.swift */; };
 		CAA769592CB562F300F8A461 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA769582CB562F300F8A461 /* StartViewController.swift */; };
 		CAA7695B2CB5638400F8A461 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA7695A2CB5638400F8A461 /* NewsViewController.swift */; };
-		CAA7695D2CB5640900F8A461 /* WebMenager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA7695C2CB5640900F8A461 /* WebMenager.swift */; };
+		CAA7695D2CB5640900F8A461 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA7695C2CB5640900F8A461 /* NetworkManager.swift */; };
 		CAA7695F2CB5671A00F8A461 /* GamePrevievCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA7695E2CB5671A00F8A461 /* GamePrevievCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,10 +32,10 @@
 		CAA7693A2CA2094C00F8A461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAA769422CA20A9A00F8A461 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		CAA769442CA20AC500F8A461 /* GameNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNews.swift; sourceTree = "<group>"; };
-		CAA769552CB5619E00F8A461 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		CAA769552CB5619E00F8A461 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		CAA769582CB562F300F8A461 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		CAA7695A2CB5638400F8A461 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
-		CAA7695C2CB5640900F8A461 /* WebMenager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebMenager.swift; sourceTree = "<group>"; };
+		CAA7695C2CB5640900F8A461 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CAA7695E2CB5671A00F8A461 /* GamePrevievCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePrevievCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA77273D2CBE25D7004DC2A3 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +86,7 @@
 			children = (
 				CAA769582CB562F300F8A461 /* StartViewController.swift */,
 				CAA7695A2CB5638400F8A461 /* NewsViewController.swift */,
-				CAA769552CB5619E00F8A461 /* WebViewController.swift */,
+				CAA769552CB5619E00F8A461 /* ContentViewController.swift */,
 			);
 			path = ViewControllerts;
 			sourceTree = "<group>";
@@ -136,7 +138,7 @@
 		CAA769572CB561FC00F8A461 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CAA7695C2CB5640900F8A461 /* WebMenager.swift */,
+				CAA7695C2CB5640900F8A461 /* NetworkManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -157,6 +159,9 @@
 			dependencies = (
 			);
 			name = SteamNews;
+			packageProductDependencies = (
+				CA77273C2CBE25D7004DC2A3 /* Alamofire */,
+			);
 			productName = SteamNews;
 			productReference = CAA769292CA2094B00F8A461 /* SteamNews.app */;
 			productType = "com.apple.product-type.application";
@@ -185,6 +190,9 @@
 				Base,
 			);
 			mainGroup = CAA769202CA2094B00F8A461;
+			packageReferences = (
+				CA77273B2CBE25D7004DC2A3 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = CAA7692A2CA2094B00F8A461 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -216,9 +224,9 @@
 				CAA7692D2CA2094B00F8A461 /* AppDelegate.swift in Sources */,
 				CAA7692F2CA2094B00F8A461 /* SceneDelegate.swift in Sources */,
 				CAA7695F2CB5671A00F8A461 /* GamePrevievCell.swift in Sources */,
-				CAA769562CB5619E00F8A461 /* WebViewController.swift in Sources */,
+				CAA769562CB5619E00F8A461 /* ContentViewController.swift in Sources */,
 				CAA7695B2CB5638400F8A461 /* NewsViewController.swift in Sources */,
-				CAA7695D2CB5640900F8A461 /* WebMenager.swift in Sources */,
+				CAA7695D2CB5640900F8A461 /* NetworkManager.swift in Sources */,
 				CAA769452CA20AC500F8A461 /* GameNews.swift in Sources */,
 				CAA769592CB562F300F8A461 /* StartViewController.swift in Sources */,
 			);
@@ -451,6 +459,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CA77273B2CBE25D7004DC2A3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CA77273C2CBE25D7004DC2A3 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA77273B2CBE25D7004DC2A3 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CAA769212CA2094B00F8A461 /* Project object */;
 }
